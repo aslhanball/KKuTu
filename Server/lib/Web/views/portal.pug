@@ -1,55 +1,132 @@
-//-
-	Rule the words! KKuTu Online
-	Copyright (C) 2017 JJoriping(op@jjo.kr)
+doctype html
+html(lang="ko")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title 다양한 글자들! 북유럽끄투에 오신것을 환영합니다!
+    style.
+      /* 전체 페이지 스타일링 */
+      body {
+        background-color: #ffffff; /* 하얀색 배경색 */
+        color: #333; /* 기본 텍스트 색상을 어두운 회색으로 */
+        font-family: 'Arial', sans-serif; /* 폰트 */
+        text-align: center; /* 텍스트 중앙 정렬 */
+        padding: 20px; /* 패딩 */
+        line-height: 1.6; /* 줄간격 */
+      }
+      /* 제목 스타일링 */
+      h1 {
+        margin-bottom: 10px; /* 아래 마진 */
+        color: #000000; /* 검은색으로 */
+      }
+      /* 부제목 스타일링 */
+      h2 {
+        margin-bottom: 30px; /* 아래 마진 */
+        color: #333; /* 어두운 회색 */
+      }
+      /* 문구 스타일링 */
+      .black-text {
+        color: #333; /* 어두운 회색 */
+      }
+      /* 이미지 링크 컨테이너 스타일링 */
+      .image-links {
+        display: flex;
+        justify-content: center;
+        gap: 15px; /* 링크 간격 */
+        margin-bottom: 20px; /* 아래 마진 */
+      }
+      /* 이미지 링크 스타일링 */
+      .image-links a {
+        display: inline-block;
+        text-decoration: none; /* 링크 밑줄 제거 */
+        transition: transform 0.3s; /* 호버 애니메이션 */
+        overflow: hidden; /* 이미지가 넘칠 때 잘라내기 */
+        border-radius: 10px; /* 이미지 모서리 둥글게 */
+        max-width: 150px; /* 이미지 최대 너비 */
+      }
+      /* 이미지 스타일링 */
+      .image-links img {
+        width: 100%; /* 이미지 100% 너비로 설정 */
+        height: auto; /* 높이 자동 조정 */
+        object-fit: cover; /* 이미지 크기 조절 */
+        transition: transform 0.3s; /* 호버 애니메이션 */
+      }
+      /* 이미지 호버 스타일링 */
+      .image-links a:hover img {
+        transform: scale(1.1); /* 호버 시 확대 */
+      }
+      /* 로그인 버튼 스타일링 */
+      .login-button {
+        background-color: #4CAF50; /* 초록색 배경 */
+        border: none; /* 테두리 없음 */
+        color: white; /* 흰색 텍스트 */
+        padding: 15px 32px; /* 패딩 */
+        text-align: center; /* 텍스트 중앙 정렬 */
+        text-decoration: none; /* 텍스트에 밑줄 없음 */
+        display: inline-block; /* 인라인 요소로 표시 */
+        font-size: 16px; /* 폰트 크기 */
+        margin-top: 20px; /* 위쪽 마진 */
+        border-radius: 10px; /* 모서리 둥글게 */
+        cursor: pointer; /* 마우스 커서를 포인터로 변경 */
+        transition: background-color 0.3s; /* 호버 애니메이션 */
+      }
+      /* 로그인 버튼 호버 스타일링 */
+      .login-button:hover {
+        background-color: #45a049; /* 진한 초록색 */
+      }
+      /* 카페 링크 스타일링 */
+      .cafe-link {
+        margin-top: 40px; /* 위쪽 마진 */
+      }
+      .cafe-link img {
+        max-width: 100px; /* 이미지 최대 너비 */
+        max-height: 75px; /* 이미지 최대 높이 */
+        border-radius: 5px; /* 이미지 모서리 둥글게 */
+        margin-right: 10px; /* 오른쪽 마진 */
+        vertical-align: middle; /* 이미지를 텍스트 가운데 정렬 */
+      }
+      .cafe-link a {
+        color: #333; /* 어두운 회색 */
+        text-decoration: none; /* 링크 밑줄 제거 */
+        transition: color 0.3s; /* 호버 애니메이션 */
+      }
+      .cafe-link a:hover {
+        color: #4CAF50; /* 호버 시 초록색 */
+      }
+  body
+    h1 다양한 글자들! 북유럽끄투에 방문하신것을 환영합니다!
+    h2 로그인을 하시면 더 좋습니다.
 
-	This program is free software: you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
+    // 서버에 연결되는 링크를 위한 이미지 컨테이너
+    .image-links
+      a(href="http://nekkutu.xyz/?server=0")
+        img(src="/img/kkutu/norway.png" alt="Norway Image")
+      a(href="http://nekkutu.xyz/?server=1")
+        img(src="/img/kkutu/denmark.png" alt="Denmark Image")
+      a(href="http://nekkutu.xyz/?server=2")
+        img(src="/img/kkutu/sweeden.png" alt="Sweden Image")
+      a(href="http://nekkutu.xyz/?server=3")
+        img(src="/img/kkutu/iceland.png" alt="Iceland Image")
+      a(href="http://nekkutu.xyz/?server=4")
+        img(src="/img/kkutu/finland.png" alt="Finland Image")
 
-	This program is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
+    p.black-text 서버 중 하나를 선택해 들어가 주세요
 
-	You should have received a copy of the GNU General Public License
-	along with this program. If not, see <http://www.gnu.org/licenses/>.
-extends layout
+    // 로그인 버튼
+    a.login-button(href="http://nekkutu.xyz/login") 로그인
 
-block Subject
-	title= L('title')
+    // 공지 카페 링크
+    .cafe-link
+      a(href="https://cafe.naver.com/northeuropekkutu")
+        img(src="/img/kkutu/navercafe.png" alt="Navercafe Image")
+      span.black-text 다양한 글자들! 북유럽끄투의 공지 카페
 
-block CSS
-	link(rel='stylesheet', href='/css/in_game_kkutu.css')
-
-block Middle
-	+separator(5)
-	div(style='float: left; width: 100%;')
-		div(style='float: left; padding-left: 70px;')
-			h3#holder= L('title').replace(/\[.+?\]/g, "")
-			img#logo(src='/img/kkutu/short_logo.png')
-		div#menu-bar(style='float: right; margin-top: 25px;')
-			a(target='_blank', href='//cafe.naver.com/sdbx', style='background-color: #63A95B;')= L('sandbox')
-			a(target='_blank', href='//blog.jjo.kr/', style='background-color: #4078DC;')= L('CREATOR')
-		div.jjoriping(style='margin-top: 40px;')
-			img.jjoObj.jjoEyeL(src='/img/jjoeyeL.png', style='left: -270px;')
-			img.jjoObj.jjoNose(src='/img/jjonose.png', style='left: -170px;')
-			img.jjoObj.jjoEyeR(src='/img/jjoeyeR.png', style='left: -70px;')
-			div.jjoDisplayBar(style='width: 325px; height: 85px;')
-				button#game-start.jjo-display= L('gameStart')
-	div(style='float: right; margin-top: -120px; width: 50%;')
-		div.server-list-box
-			h3.server-list-title
-				a#server-refresh
-					+FA('refresh')
-					+Expl(L('serverRefresh'))
-				label= L('serverList')
-				label#server-total(style='color: #AAA; font-size: 13px;')
-			div#server-list
-	div(style='float: left; width: calc(100% - 4px); border: 2px solid #CCC; margin-top: 10px; background-color: #EEE;')
-		iframe#kkutu-bulletin(width='100%', height='400px', src='/kkutu_bulletin.html')
-	+separator(10)
-
-block Bottom
-	div.bottom-legal!= L('dictionarySupport')
-	div.bottom-legal!= L('etcSupport')
+    // 테스트 텍스트
+    p.test-text 다양한 글자들! 북유럽끄투 Copyright (C) 2024 ASLHANBALL EDITS (chus48604@gmail.com)
+      | 이 프로그램은 제품에 대한 어떠한 형태의 보증도 제공되지 않습니다.
+      br
+      | 이 프로그램은 자유 소프트웨어이며 배포 규정을 만족시키는 조건 아래 자유롭게 재배포할 수 있습니다.
+      br
+      | 이에 대한 자세한 사항은 본 프로그램의 구현을 담은
+      a(href="https://github.com/aslhanball/KKuTu") 다음 레포지토리
+      | 에서 확인하십시오.
