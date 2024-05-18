@@ -40,7 +40,8 @@ exports.OPTIONS = {
 	'prv': { name: "Proverb" },
 	'str': { name: "Strict" },
 	'k32': { name: "Sami" },
-	'no2': { name: "No2" }
+	'no2': { name: "No2" },
+	'rtn': { name: "Returns" }
 };
 exports.MOREMI_PART = [ 'back', 'eye', 'mouth', 'shoes', 'clothes', 'head', 'lhand', 'rhand', 'front' ];
 exports.CATEGORIES = [ "all", "spec", "skin", "badge", "head", "eye", "mouth", "clothes", "hs", "back" ];
@@ -96,7 +97,7 @@ exports.RULE = {
 	},
 	'KSH': { lang: "ko",
 		rule: "Classic",
-		opts: [ "man", "ext", "mis", "loa", "str" ],
+		opts: [ "ext", "mis", "loa", "str" ],
 		time: 1,
 		ai: true,
 		big: false,
@@ -182,6 +183,24 @@ exports.RULE = {
 		ai: false,
 		big: true,
 		ewq: false
+	},
+	'EAP': { lang: "en",
+		rule: "Classic",
+		opts: [ "ext", "mis" ],
+		time: 1,
+		ai: true,
+		big: false,
+		_back: true,
+		ewq: true
+	},
+	'ALL': { lang: "ko",
+		rule: "keall",
+		opts: [ "mis" ],
+		time: 1,
+		ai: true,
+		big: false,
+		_back: true,
+		ewq: true
 	}
 };
 exports.getPreScore = function(text, chain, tr){
@@ -200,23 +219,25 @@ exports.MISSION_ko = [ "가", "나", "다", "라", "마", "바", "사", "아", "
 exports.MISSION_en = [ "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" ];
 
 exports.KO_INJEONG = [
-	"IMS", "VOC", "KRR", "KTV",
-	"NSK", "KOT", "DOT", "DRR", "DGM", "RAG", "LVL",
-	"LOL", "MRN", "MMM", "MAP", "MKK", "MNG",
-	"MOB", "HYK", "CYP", "HRH", "STA", "OIJ",
-	"KGR", "ESB", "ELW", "OIM", "OVW", "NEX", /*"WOW",*/
-	"YRY", "KPO", "JLN", "JAN", "ZEL", "POK", "HAI",
-	"HSS", "KMV", "HDC", "HOS"
+	"IMS", "VOC", "KTV", "STD", "KOT", "MMD", "KTW", "SNS", "MMM", "APL", "NIN", "YGU", "BUG",
+	"AOH", "DGM", "RAG", "LVL", "WOS", "VSN", "BRW", "CAR", "CHR", "SEA", "JAG", "SDB", "STB",
+	"LOL", "MAP", "KMZ", "GED", "POR", "MOA", "KOS", "MSZ", "KGR", "WOW", "DRM", "GUN", "AMI",
+    "STA", "NYN", "MCD", "THD", "CRK", "MDM", "KME", "RAK", "SOC", "MIC", "MDS", "TZR", "KGJ",
+    "ELW", "OVW", "MOB", "DBP", "HOI", "WWW", "ARK", "MUS", "KMS", "YTB", "OFL", "CHA", "DIS",
+	"KPO", "JLN", "JAN", "ZEL", "POK", "BUS", "SOL", "WEB", "CKR", "WSN", "NKS", "KJI", "BSM",
+	"KGH", "BDV", "ESB", "KRA", "PFA", "MPA", "KRR", "BST", "DOT", "VAL", "NAR", "SUP", "BOK",
+	"HSS", "KMV", "KTR", "KAB", "GAG", "ROB", "MDD", "GWG", "UHK", "MAR", "LIN", "PSK", "PRE",
+    "KAT", "GOH", "VIC", "HDC", "HAN", "PUB", "YAG", "CRA", "HOS", "AOH", "ONE", "BGT", "FAT"
 ];
 exports.EN_INJEONG = [
-	"LOL"
+	"LOL", "KAB", "ARK", "SOC", "ROB", "MIC", "WMS", "NCS", "POK", "HAK", "DBP", "GTA", "VIC"
 ];
 exports.KO_THEME = [
 	"30", "40", "60", "80", "90",
 	"140", "150", "160", "170", "190",
 	"220", "230", "240", "270", "310",
 	"320", "350", "360", "420", "430",
-	"450", "490", "530", "1001"
+	"450", "490", "530", "1001", "OIJ"
 ];
 exports.EN_THEME = [
 	"e05", "e08", "e12", "e13", "e15",
